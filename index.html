@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>School Assistant Bot</title>
+
+  <!-- Google font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app">
+
+    <!-- ───── classy top-bar ───── -->
+    <header class="top-nav">
+      <span class="brand">
+        School<span class="accent-dot">•</span>Bot
+      </span>
+
+      <!-- pill switch -->
+      <div class="lang-switch" id="lang-switch">
+        <button data-lang="en" class="active">EN</button>
+        <button data-lang="ar">AR</button>
+        <span class="slider"></span>
+      </div>
+
+      <!-- hidden <select> keeps old JS happy -->
+      <select id="lang-select" hidden>
+        <option value="en">English</option>
+        <option value="ar">العربية</option>
+      </select>
+    </header>
+
+    <!-- entrance -->
+    <section class="entrance-screen animate-in" id="entrance">
+      <div class="enter-avatar" id="enter-avatar">
+        <img src="noaii-face.png" alt="Noaii">
+      </div>
+      <h1 class="enter-text" id="enter-text">Hello<br>How can I help you?</h1>
+    </section>
+
+    <!-- messages -->
+    <main class="chat-window" id="chat-window"></main>
+
+    <!-- dock -->
+    <div class="dock">
+      <div class="suggestion-bar" id="suggestion-bar"></div>
+
+      <form id="chat-form" class="chat-form">
+        <input id="message-input"
+               type="text"
+               placeholder="Type a message…"
+               autocomplete="off"
+               required>
+        <button type="submit"
+                class="send-btn"
+                id="send-btn">➤</button>
+      </form>
+    </div>
+
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
